@@ -30,3 +30,9 @@ select distinct city
 from station
 where not (city like 'A%' or city like 'E%' or city like 'I%' or city like 'O%' or city like 'U%');
 
+--- Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths (i.e.: number of characters in the name). 
+select CITY,LENGTH(CITY) from STATION order by Length(CITY) asc, CITY limit 1; 
+select CITY,LENGTH(CITY) from STATION order by Length(CITY) desc, CITY limit 1; 
+
+
+
