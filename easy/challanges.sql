@@ -33,6 +33,12 @@ where not (city like 'A%' or city like 'E%' or city like 'I%' or city like 'O%' 
 --- Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths (i.e.: number of characters in the name). 
 select CITY,LENGTH(CITY) from STATION order by Length(CITY) asc, CITY limit 1; 
 select CITY,LENGTH(CITY) from STATION order by Length(CITY) desc, CITY limit 1; 
-
+-- Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY NOT LIKE '%a' 
+AND CITY NOT LIKE '%e'
+AND CITY NOT LIKE '%i'
+AND CITY NOT LIKE '%o'
+AND CITY NOT LIKE '%u';
 
 
