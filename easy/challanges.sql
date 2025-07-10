@@ -115,3 +115,10 @@ SELECT ROUND(SUM(LAT_N),4) FROM STATION WHERE LAT_N > 38.7880 AND LAT_N < 137.23
 select cast(round(max(lat_n), 4) as numeric(7,4))
 from station
 where lat_n <137.2345;
+
+-- Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
+SELECT CAST(ROUND(LONG_W, 4) AS NUMERIC(7,4)) 
+FROM STATION
+WHERE LAT_N <137.2345
+ORDER BY LAT_N DESC
+LIMIT 1;
