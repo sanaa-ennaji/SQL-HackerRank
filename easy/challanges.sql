@@ -140,3 +140,8 @@ WHERE LAT_N = (
 SELECT SUM(a.POPULATION) FROM CITY a , COUNTRY b 
 WHERE a.COUNTRYCODE = b.CODE 
 AND b.CONTINENT='asia';
+
+-- Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+SELECT a.NAME FROM CITY a , COUNTRY b 
+WHERE a.COUNTRYCODE = b.CODE 
+AND b.CONTINENT='africa';
