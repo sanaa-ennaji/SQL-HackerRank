@@ -122,3 +122,9 @@ FROM STATION
 WHERE LAT_N <137.2345
 ORDER BY LAT_N DESC
 LIMIT 1;
+-- Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 38.7780. Round your answer to 4 decimal places.
+SELECT ROUND(MIN(LAT_N),4) FROM STATION WHERE LAT_N > 38.7780; -- MYSQL 
+-- OR 
+select cast(round(min(lat_n),4) as numeric(6,4)) 
+from station 
+where lat_n>38.7780;
