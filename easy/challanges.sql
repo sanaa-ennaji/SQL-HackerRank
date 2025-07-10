@@ -111,3 +111,7 @@ SELECT ROUND(SUM(LAT_N), 2), ROUND(SUM(LONG_W), 2)
 FROM STATION;
 -- Query the sum of Northern Latitudes (LAT_N) from STATION having values greater and les
 SELECT ROUND(SUM(LAT_N),4) FROM STATION WHERE LAT_N > 38.7880 AND LAT_N < 137.2345;
+-- Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345. Truncate your answer to decimal 4 places.
+select cast(round(max(lat_n), 4) as numeric(7,4))
+from station
+where lat_n <137.2345;
