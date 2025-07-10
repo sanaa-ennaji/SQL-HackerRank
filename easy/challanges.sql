@@ -1,5 +1,5 @@
 -- Query all columns (attributes) for every row in the CITY table.
-    SELECT * FROM CITY ;
+ SELECT * FROM CITY ;
 
 -- Query all columns for all American cities in the CITY table with populations larger than 100000. The CountryCode for America is USA.
 SELECT *  
@@ -100,3 +100,12 @@ SELECT  MAX(POPULATION) - MIN(POPULATION) FROM CITY;
 -- Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.
 SELECT CEIL(AVG(salary)-AVG(replace(salary,0,''))) 
 FROM EMPLOYEES;
+-- the maximum total earnings to be the maximum total earnings for any employee in the Employee table
+select months*salary, count(*) from employee
+group by months*salary
+order by months*salary desc
+limit 1;
+-- The sum of all values in LAT_N rounded to a scale of 2 decimal places.
+-- The sum of all values in LONG_W rounded to a scale of 2 decimal places.
+SELECT ROUND(SUM(LAT_N), 2), ROUND(SUM(LONG_W), 2)
+FROM STATION;
