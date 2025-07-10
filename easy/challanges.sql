@@ -136,3 +136,7 @@ WHERE LAT_N = (
     FROM STATION
     WHERE LAT_N > 38.7780
 );
+--Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is ‘Asia’.
+SELECT SUM(a.POPULATION) FROM CITY a , COUNTRY b 
+WHERE a.COUNTRYCODE = b.CODE 
+AND b.CONTINENT='asia';
