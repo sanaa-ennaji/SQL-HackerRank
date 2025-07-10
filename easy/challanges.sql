@@ -109,3 +109,5 @@ limit 1;
 -- The sum of all values in LONG_W rounded to a scale of 2 decimal places.
 SELECT ROUND(SUM(LAT_N), 2), ROUND(SUM(LONG_W), 2)
 FROM STATION;
+-- Query the sum of Northern Latitudes (LAT_N) from STATION having values greater and les
+SELECT ROUND(SUM(LAT_N),4) FROM STATION WHERE LAT_N > 38.7880 AND LAT_N < 137.2345;
