@@ -151,3 +151,21 @@ SELECT COUNTRY.CONTINENT, FLOOR(AVG(CITY.POPULATION))
 FROM CITY INNER JOIN COUNTRY
 ON CITY.COUNTRYCODE = COUNTRY.CODE
 GROUP BY COUNTRY.CONTINENT;
+
+/*
+Output:
+- create a triangle using '*' with 20 rows
+
+Steps:
+1. declare a number = 20
+2. create a loop starting from 20 and down to 1
+3. within the loop, print '*' respective to decreasing number (20~1)
+*/
+
+declare @num int = 20;
+
+while (@num > 0)
+begin
+    select replicate('* ', @num)
+    set @num -= 1
+end
