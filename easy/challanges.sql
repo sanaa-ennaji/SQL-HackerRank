@@ -169,3 +169,22 @@ begin
     select replicate('* ', @num)
     set @num -= 1
 end
+
+/*
+Output:
+- Triangle using '*' with 20 rows & 20 columns in a increasing order
+
+Steps:
+1. declare a number = 1
+2. create a loop to draw '*' on each row
+3. increase the number by 1 at the end of loop
+4. close loop when the number reaches 20
+*/
+
+declare @num int = 1;
+
+while (@num <=20)
+begin
+    select replicate('* ', @num)
+    set @num += 1;
+end
